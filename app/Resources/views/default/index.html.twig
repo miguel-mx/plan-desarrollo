@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600&display=swap" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    <div class="homepage__background">
+        <div class="container">
+            <div class="homepage__intro">
+                <h1>Plan de Desarrollo 2019-2023</h1>
+                <h2><strong>Centro de Ciencias Matemáticas</strong></h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="presentacion">
+        <div class="container mt-5">
+{#            <div class="row justify-content-md-center">#}
+            <div class="row">
+                <div class="col col-lg-8">
+                    <h2 class="mb-4">Introducción</h2>
+                    <p class="lead text-justify">
+                        Estimados académicos, se les invita a vertir sus comentarios sobre lo que consideren importante para
+                        el Plan de Desarrollo del Centro de Ciencias Matemáticas para los próximos cuatro años en los siguientes rubros
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="rubros my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'computo' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Cómputo</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'divulgacion-y-vinculacion' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Divulgación y Vinculación</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'docencia-y-posgrado' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Docencia y Posgrado</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'documentacion' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Documentación</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'equidad-de-genero' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Equidad de Género</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                 <div class="col-12 col-lg-4 mb-4">
+                     <a href="{{ path('tema_show', { 'slug': 'intercambio-y-actividades-academicas' }) }}">
+                    <div class="card">
+                        <div class="card-body bg-white">
+                            <h4><strong>Intercambio y Actividades Académicas</strong></h4>
+                        </div>
+                    </div>
+                     </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'investigacion' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Investigación</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 mb-4">
+                    <a href="{{ path('tema_show', { 'slug': 'intercambio-y-actividades-academicas' }) }}">
+                        <div class="card">
+                            <div class="card-body bg-white">
+                                <h4><strong>Otros Temas de Interés</strong></h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

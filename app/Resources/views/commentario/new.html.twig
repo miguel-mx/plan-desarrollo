@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <h2 class="my-5">Tema {{ commentario.tema.titulo }}</h2>
+
+        {{ form_start(form) }}
+
+        {{ form_widget(form) }}
+
+        <div class="btn-group  mt-4" role="group" aria-label="Basic example">
+            <input class="btn btn-success" type="submit" value="Continuar" />
+            <a class="btn btn-outline-secondary ml-2" href="{{ path('tema_show', { 'slug': tema.slug }) }}" role="button">Cancelar</a>
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

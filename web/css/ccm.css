@@ -1,0 +1,38 @@
+body {
+    background: #e9f0f2;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.homepage__background {
+    background: #007375;
+}
+
+.bg-white {
+    background: #ffffff;
+    color: #007375;
+    min-height: 120px;
+}
+.homepage__intro {
+    color: #fff;
+    padding: 80px 0 80px 0;
+}
+
+.homepage__intro h1 {
+    font-family: Oswald, Helvetica, sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 600;
+    line-height: 58px;
+    margin-bottom: 20px;
+}
+
+.homepage__intro h2 {
+    font-family: Oswald, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: #007375;
+    text-decoration: underline;
+}

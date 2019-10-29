@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Commentario</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ commentario.id }}</td>
+            </tr>
+            <tr>
+                <th>Opinion</th>
+                <td>{{ commentario.opinion }}</td>
+            </tr>
+            <tr>
+                <th>Created</th>
+                <td>{% if commentario.created %}{{ commentario.created|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Host</th>
+                <td>{{ commentario.host }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('comentario_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('comentario_edit', { 'id': commentario.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
