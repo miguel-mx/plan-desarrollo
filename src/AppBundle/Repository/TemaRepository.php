@@ -2,6 +2,7 @@
 
 namespace AppBundle\Repository;
 
+
 /**
  * TemaRepository
  *
@@ -10,4 +11,13 @@ namespace AppBundle\Repository;
  */
 class TemaRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllOrderedByTitle()
+        {
+            return $this->getEntityManager()
+                ->createQuery(
+                    'SELECT t FROM AppBundle:Tema t ORDER BY t.titulo ASC'
+                )
+                ->getResult();
+        }
+
 }

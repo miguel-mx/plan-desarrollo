@@ -1,41 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Temas list</h1>
+    <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <nav>
+                        <div class="nav flex-column" id="nav-tab" role="tablist">
+                            <div class="card">
+                            <ul class="nav flex-column">
+                            {% for tema in temas %}
+                                    <li class="nav-item list-group-item">
+                                        <a class="nav-link lead" href="">{{ tema.titulo }} <span class="badge badge-pill badge-secondary  float-right">{{ tema.comentarios|length }}</span></a>
+                                    </li>
+                            {% endfor %}
+                            </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-12 col-lg-8">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titulo</th>
-                <th>Descripcion</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for tema in temas %}
-            <tr>
-                <td><a href="{{ path('tema_show', { 'slug': tema.slug }) }}">{{ tema.slug }}</a></td>
-                <td>{{ tema.titulo }}</td>
-                <td>{{ tema.descripcion }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('tema_show', { 'slug': tema.slug }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('tema_edit', { 'id': tema.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                </div>
+            </div>
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('tema_new') }}">Create a new tema</a>
-        </li>
-    </ul>
 {% endblock %}

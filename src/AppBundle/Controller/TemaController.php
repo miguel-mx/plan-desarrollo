@@ -22,7 +22,7 @@ class TemaController extends Controller
      */
     public function indexAction()
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+
 
         $em = $this->getDoctrine()->getManager();
 

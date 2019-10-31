@@ -36,3 +36,7 @@ a:hover {
     color: #007375;
     text-decoration: underline;
 }
+.badge-consulta {
+    color: #fff;
+    background-color: #007375;
+}
