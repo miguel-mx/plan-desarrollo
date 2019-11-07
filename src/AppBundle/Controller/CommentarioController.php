@@ -40,6 +40,9 @@ class CommentarioController extends Controller
      */
     public function newAction(Request $request, Tema $tema)
     {
+
+        return $this->redirectToRoute('tema_show', array('slug' => $tema->getSlug()));
+
         $commentario = new Commentario();
 
         $tema->addComentario($commentario);
